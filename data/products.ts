@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: "1",
+    name: "Pearl Stud Earrings",
+    price: 7.99,
+    category: "Studs",
+    stock: 24,
+    material: "Pearl imitation, stainless steel",
+    description: "Elegant pearl stud earrings designed for everyday beauty.",
+  },
+  {
+    id: "2",
+    name: "Gold Hoop Earrings",
+    price: 12.99,
+    category: "Hoops",
+    stock: 18,
+    material: "Gold plated alloy",
+    description: "Classic gold hoop earrings with a polished finish.",
+  },
+  {
+    id: "3",
+    name: "Crystal Drop Earrings",
+    price: 9.99,
+    category: "Drops",
+    stock: 30,
+    material: "Crystal, silver plated alloy",
+    description: "Sparkling crystal drop earrings for special moments.",
+  },
+  {
+    id: "4",
+    name: "Butterfly Earrings",
+    price: 8.99,
+    category: "Fashion",
+    stock: 15,
+    material: "Alloy",
+    description: "Cute butterfly earrings with a soft elegant style.",
+  },
+];

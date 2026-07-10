@@ -1,27 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import { products } from '@/data/products';
 
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
-  const products = [
-    { id: 1, name: 'Pearl Stud Earrings', price: 7.99, category: 'studs', image: '💎' },
-    { id: 2, name: 'Gold Hoop Earrings', price: 12.99, category: 'hoops', image: '✨' },
-    { id: 3, name: 'Crystal Drop Earrings', price: 9.99, category: 'drops', image: '💎' },
-    { id: 4, name: 'Butterfly Earrings', price: 8.99, category: 'studs', image: '🦋' },
-    { id: 5, name: 'Rose Gold Hoops', price: 11.99, category: 'hoops', image: '✨' },
-    { id: 6, name: 'Emerald Drop', price: 14.99, category: 'drops', image: '💚' },
-    { id: 7, name: 'Diamond Studs', price: 19.99, category: 'studs', image: '💎' },
-    { id: 8, name: 'Vintage Hoops', price: 13.99, category: 'hoops', image: '✨' },
-  ];
-
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'studs', name: 'Studs' },
-    { id: 'hoops', name: 'Hoops' },
-    { id: 'drops', name: 'Drops' },
+    { id: 'Studs', name: 'Studs' },
+    { id: 'Hoops', name: 'Hoops' },
+    { id: 'Drops', name: 'Drops' },
+    { id: 'Fashion', name: 'Fashion' },
   ];
 
   let filtered = selectedCategory === 'all' 
@@ -39,13 +30,14 @@ export default function Shop() {
       <section className="px-6 py-6 flex justify-between items-center border-b">
         <h1 className="text-xl font-bold tracking-wide">SHINE ON JEWELRY</h1>
         <nav className="hidden md:flex gap-6 text-sm">
-          <a href="/" className="hover:text-[#b9975b]">Home</a>
-          <a href="/shop" className="font-semibold text-[#b9975b]">Shop</a>
-          <a href="#" className="hover:text-[#b9975b]">Contact</a>
-        </nav>
-        <button className="rounded-full border px-4 py-2 text-sm hover:bg-[#b9975b] hover:text-white transition">
-          Cart
-        </button>
+           <a href="/" className="hover:text-[#b9975b]">Home</a>
+           <a href="/shop" className="font-semibold text-[#b9975b]">Shop</a>
+           <a href="/admin">Admin</a>
+           <a href="/cart">Cart</a>
+         </nav>
+         <a href="/cart" className="rounded-full border px-4 py-2 text-sm hover:bg-[#b9975b] hover:text-white transition">
+           Cart
+         </a>
       </section>
 
       <section className="px-6 py-12">
@@ -98,7 +90,7 @@ export default function Shop() {
               className="rounded-3xl bg-white p-5 shadow-sm hover:shadow-md transition cursor-pointer group"
             >
               <div className="mb-4 flex h-48 items-center justify-center rounded-2xl bg-[#f1ebe2] text-5xl group-hover:bg-[#e8dfd5] transition">
-                {product.image}
+                💎
               </div>
               <h4 className="font-semibold line-clamp-2">{product.name}</h4>
               <p className="mt-2 text-lg font-semibold text-[#b9975b]">${product.price.toFixed(2)}</p>

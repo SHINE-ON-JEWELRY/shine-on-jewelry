@@ -1,36 +1,7 @@
 "use client";
 
 import AddToCartButton from "@/components/AddToCartButton";
-
-const products = [
-  {
-    id: "1",
-    name: "Pearl Stud Earrings",
-    price: 7.99,
-    category: "Studs",
-    material: "Pearl imitation, stainless steel",
-    description:
-      "Elegant pearl stud earrings designed for everyday beauty and simple luxury.",
-  },
-  {
-    id: "2",
-    name: "Gold Hoop Earrings",
-    price: 12.99,
-    category: "Hoops",
-    material: "Gold plated alloy",
-    description:
-      "Classic gold hoop earrings with a polished finish for a timeless look.",
-  },
-  {
-    id: "3",
-    name: "Crystal Drop Earrings",
-    price: 9.99,
-    category: "Drops",
-    material: "Crystal, silver plated alloy",
-    description:
-      "Sparkling crystal drop earrings perfect for dinner, parties, and special events.",
-  },
-];
+import { products } from "@/data/products";
 
 export default function ProductDetailPage({
   params,
@@ -67,7 +38,7 @@ export default function ProductDetailPage({
           <h1 className="mt-3 text-5xl font-bold">{product.name}</h1>
 
           <p className="mt-5 text-3xl font-bold text-[#b9975b]">
-            ${product.price}
+            ${product.price.toFixed(2)}
           </p>
 
           <p className="mt-6 text-gray-600">{product.description}</p>
