@@ -1,11 +1,4 @@
-const products = [
-  ["Pearl Stud Earrings", "$7.99", "Studs", "24"],
-  ["Gold Hoop Earrings", "$12.99", "Hoops", "18"],
-  ["Crystal Drop Earrings", "$9.99", "Drops", "30"],
-  ["Butterfly Earrings", "$8.99", "Fashion", "15"],
-  ["Heart Earrings", "$9.49", "Fashion", "20"],
-  ["Flower Earrings", "$10.99", "Floral", "12"],
-];
+import { products } from "@/data/products";
 
 export default function AdminProductsPage() {
   return (
@@ -46,12 +39,12 @@ export default function AdminProductsPage() {
               </thead>
 
               <tbody>
-                {products.map(([name, price, category, stock]) => (
-                  <tr key={name} className="border-t border-white/10">
-                    <td className="py-4 font-medium">{name}</td>
-                    <td>{price}</td>
-                    <td>{category}</td>
-                    <td>{stock}</td>
+                {products.map((product) => (
+                  <tr key={product.id} className="border-t border-white/10">
+                    <td className="py-4 font-medium">{product.name}</td>
+                    <td>${product.price.toFixed(2)}</td>
+                    <td>{product.category}</td>
+                    <td>{product.stock}</td>
                     <td>
                       <button className="text-[#d4af37]">Edit</button>
                     </td>
