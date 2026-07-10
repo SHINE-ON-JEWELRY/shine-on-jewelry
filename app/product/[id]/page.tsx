@@ -51,9 +51,14 @@ export default function ProductDetailPage({
         </div>
 
         <div>
-          <a href="/shop" className="text-sm text-[#b9975b]">
-            ← Back to Shop
-          </a>
+          <div className="flex items-center">
+            <a href="/shop" className="text-sm text-[#b9975b]">
+              ← Back to Shop
+            </a>
+            <a href="/cart" className="ml-4 text-sm text-[#b9975b]">
+              View Cart →
+            </a>
+          </div>
 
           <p className="mt-8 text-sm uppercase tracking-[0.3em] text-[#b9975b]">
             {product.category}

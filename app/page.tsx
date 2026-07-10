@@ -4,12 +4,14 @@ export default function Home() {
       <section className="px-6 py-6 flex justify-between items-center">
         <h1 className="text-xl font-bold tracking-wide">SHINE ON JEWELRY</h1>
         <nav className="hidden md:flex gap-6 text-sm">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">Featured Earrings</a>
-          <a href="#">Contact</a>
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="/admin">Admin</a>
+          <a href="/cart">Cart</a>
         </nav>
-        <button className="rounded-full border px-4 py-2 text-sm">Cart</button>
+        <a href="/cart" className="rounded-full border px-4 py-2 text-sm">
+          Cart
+        </a>
       </section>
 
       <section className="px-6 py-24 text-center">
